@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>mod_twitter_widget</name>
+	<author>Joomla! Project</author>
+	<creationDate>July 2004</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_CUSTOM_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_twitter_widget">mod_twitter_widget.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_twitter_widget.ini</language>
+		<language tag="en-GB">en-GB.mod_twitter_widget.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CUSTOM_HTML" />
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+
+				<field name="widget_id" type="text" label="MOD_TWITTER_TIMELINE_WIDGET_ID_LABEL" description="MOD_TWITTER_TIMELINE_WIDGET_ID_DESCRIPTION"/>
+
+				<field name="username" type="text" label="MOD_TWITTER_TIMELINE_USERNAME_LABEL" description="MOD_TWITTER_TIMELINE_USERNAME_DESCRIPTION"/>
+
+				<field name="theme" type="list" label="MOD_TWITTER_TIMELINE_TEHEME_LABEL" description="MOD_TWITTER_TIMELINE_TEHEME_DESCRIPTION">
+					<option value="light">light</option>
+					<option value="dark">dark</option>
+				</field>						
+
+				<field name="link_color" type="text" label="MOD_TWITTER_TIMELINE_LINK_COLOR_LABEL" description="MOD_TWITTER_TIMELINE_LINK_COLOR_DESCRIPTION"/>
+
+				<field name="chrome" type="checkboxes" label="MOD_TWITTER_TIMELINE_CHROME_LABEL" description="MOD_TWITTER_TIMELINE_CHROME_DESCRIPTION">
+					<option value="nofooter ">Disable footer</option>
+					<option value="noborders ">Disable borders</option>
+				</field>
+				<field name="border_color" type="text" label="MOD_TWITTER_TIMELINE_BORDER_COLOR_LABEL" description="MOD_TWITTER_TIMELINE_BORDER_COLOR_DESCRIPTION"/>
+			</fieldset>
+
+			<fieldset	name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

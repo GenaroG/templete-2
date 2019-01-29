@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>MOD_HEX_GOOGLE_CHART</name>
+  <author>HexSys Team</author>
+  <creationDate>March 2013</creationDate>
+  <copyright>Copyright (C) 2013 hexsystechnologies.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>info@hexsystechnologies.com</authorEmail>
+  <authorUrl>www.hexsystechnologies.com</authorUrl>
+  <version>1.0.0</version>
+  <description>MOD_HEX_GOOGLE_DESCR</description>
+  <languages>
+	    <language tag="en-GB">language/en-GB/en-GB.mod_hex_google_chart.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_hex_google_chart.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_hex_google_chart">mod_hex_google_chart.php</filename>
+    <folder>tmpl</folder>
+    <filename>index.html</filename>
+  </files>
+  <config>
+    <fields name="params">
+		<fieldset name="Basic">
+			<field name="chart_data" type="textarea" rows="25" cols="60" default="['Year', 'Austria', 'Bulgaria', 'Denmark', 'India'],
+    ['2003',  1336060,    400361,    1001582, 5335335],
+    ['2004',  1538156,    366849,    1119450, 3453453],
+    ['2005',  1576579,    440514,    993360, 35345345], 
+    ['2006',  1600652,    434552,    1004163, 3534533],
+    ['2007',  1968113,    393032,    979198, 34534334],
+    ['2008',  1901067,    517206,    916965, 34535355]" label="DATA_CHART" description="DATA_CHART_DESC"/>
+			<field name="width" type="text" default="600" label="WIDTH" description="WIDTH_DESC"/>
+			<field name="height" type="text" default="400" label="HEIGHT" description="HEIGHT_DESC"/>
+			<field name="chart_title" type="text" default="Google Chart" label="CHART_TITLE" description="CHART_TITLE_DESC"/>
+			<field name="hAxis" type="text" default="" label="H_AXIS" description="H_AXIS_DESC"/>
+			<field name="vAxis" type="text" default="" label="V_AXIS" description="V_AXIS_DESC"/>
+			<field name="colors" type="text" default="" label="COLOR" description="COLOR_DESC"/>
+			<field name="chart_galllery" type="list" default="PieChart" label="CHART_GALLERY" description="CHART_GALLERY_DESC">
+				<option value="AreaChart">Area Chart</option>
+				<option value="BarChart">Bar Chart</option>
+				<option value="Gauge">Gauge Chart</option>
+				<option value="LineChart">Line Chart</option>
+				<option value="Table">Table Chart</option>
+				<option value="PieChart">Pie Chart</option>`					
+			</field>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+			<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+			  <option value="1">JGLOBAL_USE_GLOBAL</option>
+			  <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+			<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+			<field name="cachemode" type="hidden" default="itemid">
+			  <option value="itemid"/>
+			</field>
+		</fieldset>
+    </fields>
+  </config>
+</extension>

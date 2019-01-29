@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>BT Facebook LikeBox</name>
+	<author>Bowthemes</author>
+	<creationDate>Oct 2011</creationDate>
+	<copyright>Copyright (C) 2012 Bowthemes. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@bowthemes.com</authorEmail>
+	<authorUrl>www.bowthemes.com</authorUrl>
+	<version>1.5</version>
+	<description>
+	<![CDATA[
+		
+		<div class="bt_description">
+			<h3>BT Facebook LikeBox Module Version 1.5</h3>			
+			<a href="http://bowthemes.com" target="_blank"><img src="../modules/mod_bt_facebooklikebox/admin/images/facebook-fan.png"></a>
+			<p>BT Facebook like box, a Joomla 2.5 & Joomla 3.x native module provides Facebook Page owners to attract and gain Likes from their own website content, it uses the <a href="http://developers.facebook.com/docs/reference/plugins/like-box" target="_blank">FaceBook LikeBox API</a>. 
+			</p>
+			<br clear="both" />
+			<h3>Features</h3>
+			<ul class="list-style">
+				<li>Show how many users already like your page, and which of their friends like it too</li>
+				<li>Read recent posts from the page</li>
+				<li>Like the page with one click, without needing to visit the page</li>		
+				<li>Support both Fanbox & Likebox type</li>		
+				<li>Customize the Facebook Fan Box Layout with CSS</li>			
+			</ul>
+			<h3>Upgrade versions</h3>
+			<p>
+				Your current versions is 1.5. <a target="_blank" href="http://bowthemes.com/bt-facebook-like-box.html">Find our latest versions now</a>
+			</p>
+			<h3>Userful links</h3>
+			<ul>
+				<li><a target="_blank" href="http://bowthemes.com/bt-facebook-like-box.html">Video tutorials</a></li>
+				<li><a target="_blank" href="http://bowthemes.com/forums/11-bt-facebook-like/">Report bug</a></li>
+				<li><a target="_blank" href="http://bowthemes.com/forums/11-bt-facebook-like/">Forum support</a></li>
+			</ul>
+			<h3>About bow themes & copyright</h3>	
+			<p>
+				Bow Themes is Professional Joomla template provider. We are focused on creating unique, attractive and clean templates without loosing flexibility and simplicity of customization
+			</p>
+			Copyright (C) 2012 BowThemes	
+
+		</div>
+		<style>
+			.bt_description{
+				text-align: left;
+			}
+			.bt_description h3{
+				text-transform: uppercase;
+				margin: 20px 0px 10px 0px;
+			}
+			.bt_description img{
+				float:left;
+				margin:5px 10px 5px 0px;
+			}
+			.bt_description p,.bt_description li{
+				padding: 5px 5px 5px 30px;	
+				list-style: none outside none;
+			}
+			
+			.bt_description ul.list-style li{
+				background:url(../modules/mod_bt_facebooklikebox/admin/images/tick.png) 0px 6px no-repeat;
+				padding-left:30px;
+				line-height:15px;
+			}
+		</style>
+	]]>	
+	</description>
+	<files>
+		<filename module="mod_bt_facebooklikebox">mod_bt_facebooklikebox.php</filename>
+		<folder>tmpl</folder>
+		<folder>admin</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.mod_bt_facebooklikebox.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="type" class="bt_control" type="list" default="likebox" label="BT_FACEBOOK_PAGE_TYPE_LABEL" description="BT_FACEBOOK_PAGE_TYPE_DESC">
+                    <option value="likebox">Likebox</option>
+					<option value="follow">Follow Button</option>
+                </field>
+				<field
+					name="profile" class="type_follow" type="text" size="33"
+					default="https://www.facebook.com/zuck"
+					label="BT_FACEBOOK_PROFILE_URL_LABEL"
+					description="BT_FACEBOOK_PROFILE_URL_DESC">
+				</field>
+				<field
+					name="href" class="type_likebox" type="text" size="33"
+					default="http://www.facebook.com/bowthemes"
+					label="BT_FACEBOOK_PAGE_URL_LABEL"
+					description="BT_FACEBOOK_PAGE_URL_DESC">
+				</field>
+				<field name="width" type="text" default="" label="BT_FACEBOOK_PAGE_WIDTH_LABEL" description="BT_FACEBOOK_PAGE_WIDTH_DESC" />
+                <field name="height" class="type_likebox" type="text" default="" label="BT_FACEBOOK_PAGE_HEIGHT_LABEL" description="BT_FACEBOOK_PAGE_HEIGHT_DESC" />
+                <field name="height_follow" class="type_follow" type="text" default="" label="BT_FACEBOOK_PAGE_HEIGHT_FOLLOW_LABEL" description="BT_FACEBOOK_PAGE_HEIGHT_FOLLOW_DESC" />
+				<field name="layout" class="type_follow" type="list" default="standard" label="BT_FACEBOOK_LAYOUT_LABEL" description="BT_FACEBOOK_LAYOUT_DESC">
+                    <option value="standard">Standard</option>
+                    <option value="button_count">Button_count</option>
+                    <option value="box_count">Box_count</option>
+                </field>
+				<field
+					name="font" class="type_follow" type="list" default=""
+					label="BT_FACEBOOK_FONT_LABEL"
+					description="BT_FACEBOOK_FONT_DESC">
+					<option value="">JDEFAULT</option>
+					<option value="arial">Arial</option>
+					<option value="lucida grande">Lucida Grande</option>
+					<option value="segoe ui">Segoe UI</option>
+					<option value="tahoma">Tahoma</option>
+					<option value="trebuchet ms">Trebuchet MS</option>
+					<option value="verdana">Verdana</option>
+				</field>
+				
+				<field name="show_faces" class="btn-group" type="radio" default="true" label="BT_FACEBOOK_PAGE_SHOW_FACES_LABEL" description="BT_FACEBOOK_PAGE_SHOW_FACES_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+				<field name="connections" class="type_likebox" type="text" default="10" label="BT_FACEBOOK_PAGE_FACES_NUM_LABEL" description="BT_FACEBOOK_PAGE_FACES_NUM_DESC">
+                </field>
+				<field name="colorscheme" type="list" default="light" label="BT_FACEBOOK_PAGE_COLOR_SCHEME_LABEL" description="BT_FACEBOOK_PAGE_COLOR_SCHEME_DESC">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </field>
+				<field name="show_stream" class="btn-group type_likebox" type="radio" default="true" label="BT_FACEBOOK_PAGE_SHOW_STREAM_LABEL" description="BT_FACEBOOK_PAGE_SHOW_STREAM_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+				<field name="show_header" class="btn-group type_likebox" type="radio" default="true" label="BT_FACEBOOK_PAGE_SHOW_HEADER_LABEL" description="BT_FACEBOOK_PAGE_SHOW_HEADER_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+				<field name="force_wall" class="btn-group type_likebox" type="radio" default="false" label="BT_FACEBOOK_PAGE_FORCE_WALL_LABEL" description="BT_FACEBOOK_PAGE_FORCE_WALL_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+				<field name="show_border" class="btn-group type_likebox" type="radio" default="true" label="BT_FACEBOOK_PAGE_SHOW_BORDER_LABEL" description="BT_FACEBOOK_PAGE_SHOW_BORDER_DESC">
+                    <option value="false">JNO</option>
+                    <option value="true">JYES</option>
+                </field>
+				<field name="render" type="list" default="iframe" label="BT_FACEBOOK_PAGE_RENDER_LABEL" description="BT_FACEBOOK_PAGE_RENDER_DESC">
+                    <option value="iframe">IFRAME</option>
+                    <option value="sdk">JavaScript SDK</option>
+                </field>
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+				<field addfieldpath="/modules/mod_bt_facebooklikebox/admin/formfield" type="asset" name="asset" path="modules/mod_bt_facebooklikebox/admin/" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

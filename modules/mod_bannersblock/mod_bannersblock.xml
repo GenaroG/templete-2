@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>Module BannersBlock</name>
+	<creationDate>11/11/2013</creationDate>
+	<author>Olejenya</author>
+	<authorEmail>olejenya@olejenya.com</authorEmail>
+	<copyright>Copyright (C) 2012 Open Source Matters. All rights reserved.Olejenya</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1</version>
+	<description>Best BannersBlock Module is a Joomla! 2.5 Module which displays modules as a tab from joomla module manager.</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_bannersblock.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_bannersblock.sys.ini
+		</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_bannersblock">mod_bannersblock.php</filename>
+		<filename>mod_bannersblock.xml</filename>
+		<filename>helper.php</filename>
+		<folder>css</folder>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+	
+	<fields name="params"  >
+			<fieldset name="basic">
+				<field name="mod_total_image" type="list" default="20" label="MOD_STYLESLIDE_31_LABEL" description="MOD_STYLESLIDE_31_DES">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+				</field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner1--------------------------------------------"></field>
+
+				<field name="bannerlink1" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle1" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					
+					<field name="bannerheight1" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth1" type="text" default=""
+					label="banner width"
+					description="banner width" />
+				
+				<field name="mod_1_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_70_LABEL" description="MOD_STYLESLIDE_70_DES" />
+				
+				<field name="mod_image_1_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_72_LABEL" description="MOD_STYLESLIDE_72_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				<field name="" type="spacer" label="--------------------------------------------SettingsBanner2--------------------------------------------"></field>
+				<field name="bannerlink2" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle2" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight2" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth2" type="text" default=""
+					label="banner width"
+					description="banner width" />
+
+				<field name="mod_2_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_73_LABEL" description="MOD_STYLESLIDE_73_DES" />
+				
+				<field name="mod_image_2_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_75_LABEL" description="MOD_STYLESLIDE_75_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner3--------------------------------------------"></field>
+
+				<field name="bannerlink3" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle3" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight3" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth3" type="text" default=""
+					label="banner width"
+					description="banner width" />
+	
+				<field name="mod_3_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_76_LABEL" description="MOD_STYLESLIDE_76_DES" />
+				
+				<field name="mod_image_3_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_78_LABEL" description="MOD_STYLESLIDE_78_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner4--------------------------------------------"></field>
+
+				<field name="bannerlink4" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle4" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight4" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth4" type="text" default=""
+					label="banner width"
+					description="banner width" />
+
+				<field name="mod_4_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_79_LABEL" description="MOD_STYLESLIDE_79_DES" />
+				
+				<field name="mod_image_4_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_81_LABEL" description="MOD_STYLESLIDE_81_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner5--------------------------------------------"></field>
+
+				<field name="bannerlink5" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle5" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannertitle5" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight5" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth5" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_5_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_82_LABEL" description="MOD_STYLESLIDE_82_DES" />
+				
+				<field name="mod_image_5_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_84_LABEL" description="MOD_STYLESLIDE_84_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner6--------------------------------------------"></field>
+
+				<field name="bannerlink6" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle6" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannertitle6" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight6" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth6" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_6_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_85_LABEL" description="MOD_STYLESLIDE_85_DES" />
+				
+				<field name="mod_image_6_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_87_LABEL" description="MOD_STYLESLIDE_87_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner7--------------------------------------------"></field>
+
+				<field name="bannerlink7" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle7" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannertitle7" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight7" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth7" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_7_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_88_LABEL" description="MOD_STYLESLIDE_88_DES" />
+				
+				<field name="mod_image_7_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_90_LABEL" description="MOD_STYLESLIDE_90_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner8--------------------------------------------"></field>
+
+				<field name="bannerlink8" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle8" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannertitle8" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+				<field name="bannerheight8" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth8" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_8_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_91_LABEL" description="MOD_STYLESLIDE_91_DES" />
+				
+				<field name="mod_image_8_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_93_LABEL" description="MOD_STYLESLIDE_93_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				<field name="" type="spacer" label="--------------------------------------------SettingsBanner9--------------------------------------------"></field>
+
+				<field name="bannerlink9" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+					
+
+				<field name="bannertitle9" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight9" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth9" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_9_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_94_LABEL" description="MOD_STYLESLIDE_94_DES" />
+				
+				<field name="mod_image_9_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_96_LABEL" description="MOD_STYLESLIDE_96_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner10--------------------------------------------"></field>
+
+				<field name="bannerlink10" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle10" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					
+					<field name="bannerheight10" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth10" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_10_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_97_LABEL" description="MOD_STYLESLIDE_97_DES" />
+				
+				<field name="mod_image_10_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_99_LABEL" description="MOD_STYLESLIDE_99_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner11--------------------------------------------"></field>
+
+				<field name="bannerlink11" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle11" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight11" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth11" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_11_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_100_LABEL" description="MOD_STYLESLIDE_100_DES" />
+				
+				<field name="mod_image_11_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_102_LABEL" description="MOD_STYLESLIDE_102_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+											<field name="" type="spacer" label="--------------------------------------------SettingsBanner12--------------------------------------------"></field>
+
+				<field name="bannerlink12" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+
+				<field name="bannertitle12" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight12" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth12" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_12_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_103_LABEL" description="MOD_STYLESLIDE_103_DES" />
+				
+				<field name="mod_image_12_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_105_LABEL" description="MOD_STYLESLIDE_105_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner13--------------------------------------------"></field>
+
+				<field name="bannerlink13" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle13" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight13" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth13" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_13_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_106_LABEL" description="MOD_STYLESLIDE_106_DES" />
+			
+				<field name="mod_image_13_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_108_LABEL" description="MOD_STYLESLIDE_108_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner14--------------------------------------------"></field>
+
+				<field name="bannerlink14" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle14" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight14" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth14" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_14_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_109_LABEL" description="MOD_STYLESLIDE_109_DES" />
+				
+				<field name="mod_image_14_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_111_LABEL" description="MOD_STYLESLIDE_111_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner15--------------------------------------------"></field>
+
+				<field name="bannerlink15" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle15" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight15" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth15" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_15_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_112_LABEL" description="MOD_STYLESLIDE_112_DES" />
+				
+				<field name="mod_image_15_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_114_LABEL" description="MOD_STYLESLIDE_114_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner16--------------------------------------------"></field>
+
+				<field name="bannerlink16" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle16" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight16" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth16" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_16_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_115_LABEL" description="MOD_STYLESLIDE_115_DES" />
+				
+				<field name="mod_image_16_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_117_LABEL" description="MOD_STYLESLIDE_117_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner17--------------------------------------------"></field>
+
+				<field name="bannerlink17" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle17" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight17" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth17" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_17_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_118_LABEL" description="MOD_STYLESLIDE_118_DES" />
+				
+				<field name="mod_image_17_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_120_LABEL" description="MOD_STYLESLIDE_120_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner18--------------------------------------------"></field>
+
+				<field name="bannerlink18" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle18" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight18" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth18" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_18_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_121_LABEL" description="MOD_STYLESLIDE_121_DES" />
+				
+				<field name="mod_image_18_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_123_LABEL" description="MOD_STYLESLIDE_123_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+								<field name="" type="spacer" label="--------------------------------------------SettingsBanner19--------------------------------------------"></field>
+
+				<field name="bannerlink19" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+			
+				<field name="bannertitle19" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight19" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth19" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_19_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_124_LABEL" description="MOD_STYLESLIDE_124_DES" />
+				
+				<field name="mod_image_19_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_126_LABEL" description="MOD_STYLESLIDE_126_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				<field name="" type="spacer" label="--------------------------------------------SettingsBanner20--------------------------------------------"></field>
+				<field name="bannerlink20" type="text" default=""
+					label="bannerlink"
+					description="bannerlink" />
+							
+
+				<field name="bannertitle20" type="text" default=""
+					label="bannertitle"
+					description="bannertitle" />
+					<field name="bannerheight20" type="text" default=""
+					label="banner height"
+					description="banner height" />
+			
+				<field name="bannerwidth20" type="text" default=""
+					label="banner width"
+					description="banner width" />	
+				<field name="mod_20_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_127_LABEL" description="MOD_STYLESLIDE_127_DES" />
+			
+				<field name="mod_image_20_para" type="textarea" filter="safehtml" cols="70" rows="7" label="MOD_STYLESLIDE_129_LABEL" description="MOD_STYLESLIDE_129_DES" default="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in dolor quam. Morbi urna turpis, interdum eu aliquam sit amet, adipiscing non lectus."></field>
+				
+				
+			</fieldset>
+		   			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+				label="MOD_STYLESLIDE_MODULE_SUFX_LABEL" description="MOD_STYLESLIDE_MODULE_SUFX_DES" />
+			</fieldset>
+
+		   
+	</fields>	
+	</config>
+</extension>

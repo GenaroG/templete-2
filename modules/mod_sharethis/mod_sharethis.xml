@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" client="site" method="upgrade">
+	<name>ShareThis</name>
+    <author>ShareThis</author>
+    <copyright>Copyright (c) 2010 ShareThis, Inc.</copyright>
+    <license>GPL 3.0</license>
+    <authorUrl>http://www.sharethis.com</authorUrl>
+    <version>6.3</version>
+    <creationDate>27-Aug-2013</creationDate>
+    <description>
+        <![CDATA[A quick and easy sharing tool that allows your users to share your content on Facebook, Twitter, Pinterest, Instagram and more.]]>
+    </description>
+	
+	<files>
+		<!-- Given file names which are used -->
+		<filename module="mod_sharethis">mod_sharethis.php</filename>
+		<filename>st_libraries/jquery.min.js</filename>
+		<filename>st_js/sharethis.js</filename>
+		<filename>elements/fieldExternalScritps.php</filename>
+		<filename>st_css/msharethis_25.css</filename>
+		<filename>st_css/msharethis_32.css</filename>
+		<filename>helper.php</filename>
+		<filename>st_images/largeIcon.png</filename>
+        <filename>st_images/horizontalCounts.png</filename>
+        <filename>st_images/verticalCounts.png</filename>
+        <filename>st_images/classic.png</filename>
+        <filename>st_images/regularButtons.png</filename>
+        <filename>st_images/buttonNoText.png</filename>
+        <filename>st_images/buttons.png</filename>
+		<filename>st_images/widget-icons-sprite.png</filename>
+	</files>
+		
+	<config addfieldpath="/modules/mod_sharethis/elements">
+		<fields name="params">
+			<fieldset name="basic">
+				<!-- Custom field -->
+				<field name="" type="fieldExternalScritps" />
+				
+				<!-- Given user choice to choose version of shareThis widget -->
+				<field class="st_setting" name="widget_type" type="radio" default="1" label="Widget Type :" description="Choose shareThis widget version">
+					<option value="0">Classic&#160;&#160;&#160;</option> 
+					<option value="1">Multi-post</option> 
+				</field>
+				
+				
+				<!-- Given user choice to choose button style -->
+				<field class="st_setting" name="button_style" type="radio" default="button" label="Button Style :" description="Choose shareThis widget version">
+					<option value="lg-icons" class="st_option"><![CDATA[ <div><div>Large Icons</div><img src="../modules/mod_sharethis/st_images/largeIcon.png" style='float:none;'></div>]]></option>
+					<option value="lg-horizontal" class="st_option"><![CDATA[ <div><div>Horizontal Count</div><img src="../modules/mod_sharethis/st_images/horizontalCounts.png"  style='float:none;'></div>]]></option>
+					<option value="lg-vertical" class="st_option"><![CDATA[ <div><div>Vertical Count</div><img src="../modules/mod_sharethis/st_images/verticalCounts.png" style='float:none;'></div>]]></option>
+					<option value="sm-classic" class="st_option"><![CDATA[ <div><div>Classic</div><img src="../modules/mod_sharethis/st_images/classic.png" style='float:none;'></div>]]></option>
+					<option value="sm-regular" class="st_option"><![CDATA[ <div><div>Regular Buttons</div><img src="../modules/mod_sharethis/st_images/regularButtons.png" style='float:none;'></div>]]></option>
+					<option value="sm-notext" class="st_option"><![CDATA[ <div><div>Regular Button No-Text</div><img src="../modules/mod_sharethis/st_images/buttonNoText.png" style='float:none;'></div>]]></option>
+					<option value="button" class="st_option"><![CDATA[ <div><div>Buttons</div><img src="../modules/mod_sharethis/st_images/buttons.png" style='float:none;'></div>]]></option>
+					<option value="custom-button" class="st_option"><![CDATA[ <div><div>Custom Buttons</div><img src="../modules/mod_sharethis/st_images/custom_buttons.png" style='float:none;'></div>]]></option>
+				</field>
+								
+				<field class="st_setting" type="spacer" name="myspacer" label="&lt;div id='st_register_container'&gt;&lt;div id='st_inner_container'&gt;&lt;span id='st_register_instructions'&gt;Join the ShareThis Publisher Network of over 2M sites and get access to your social analytics.&lt;/span&gt;&lt;ol id='st_instructions_list'&gt;&lt;li&gt;&lt;a href='javascript:;' class='registerLink'&gt;Sign up&lt;/a&gt; for your free account now.&lt;/li&gt;&lt;li&gt;At the end of the flow, you will be given your unique publisher key. &lt;/li&gt;&lt;li&gt;Please copy and paste it in the textbox below.  &lt;i&gt;Although a publisher key is created by default, it  needs to be replaced with the newly generated one to access your domain specific reports.&lt;/i&gt; &lt;input  style='visibility: hidden;' type='textarea'/&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;"></field>
+				
+				<!-- Given user provision to enter his/her publisher key -->
+				<field class="st_setting pub_key" name="pubKey" id='pubKey' default="jm-00000000-0000-0000-0000-000000000000" type="text"  label=" " description="Enter your Publisher Key"></field>
+				<field name="hidden_field" type="hidden"></field>
+				
+				<!-- Spacer to increase the panel height -->
+				<field type="spacer" default=" " />
+			</fieldset>
+			<!-- Given user provision to choose other services		-->
+		<fieldset name="advanced">
+			<field class="st_setting" name="pinterest" type="radio" default="0" label="Pinterest :" description="">
+				<option value="0">Yes</option>
+				<option value="1">No</option>
+			</field>
+			<field class="st_setting" name="linkedin" type="radio" default="0" label="LinkedIn :" description="">
+				<option value="0">Yes</option>
+				<option value="1">No</option>
+			</field>
+			<field class="st_setting" name="twitter" type="radio" default="1" label="Twitter Follow :" description="">
+				<option value="0" class="textbox_username">Yes</option>
+				<option value="1" class="textbox_username">No</option>
+			</field>
+			<field class="st_setting username" name="username" type="text" default="" label="" filter="raw" description="" size="20" />
+			<field class="st_setting" name="twittervia" type="radio" default="1" label="Via @twitter_handle :" description="">
+				<option value="0" class="textbox_via">Yes</option>
+				<option value="1" class="textbox_via">No</option>
+			</field>
+			<field class="st_setting via" name="via" type="text" default="" label="" filter="raw" description="" size="20" />    
+			<field class="st_setting" name="vinstagram" type="radio" default="1" label="Instagram Follow :" description="">
+				<option value="0" class="textbox_userinstagram">Yes</option>
+				<option value="1" class="textbox_userinstagram">No</option>
+			</field>
+			<field class="st_setting userinstagram" name="userinstagram" type="text" default="" label="" filter="raw" description="" size="20" />
+
+			<!-- Starts: CNS functionality -->
+			<field class="st_setting" name="cnslabel" id="cnslabel" type="radio" label="&lt;b style='font-size:13px;font-weight:bold;'&gt;CopyNShare: &lt;sup&gt;(&lt;a target='_blank' class='helpLink' href='http://support.sharethis.com/customer/portal/articles/517332-share-widget-faqs#copynshare'&gt;?&lt;/a&gt;)&lt;/sup&gt;&lt;/b&gt;" description="" />
+			<field class="st_setting cns_radios" name="donotcopy" id="donotcopy" type="radio" default="1" label="Measure copy &amp; shares of your site's content" description="">
+			  <option value="0" class="donotcopy_yes">Yes</option>
+			  <option value="1" class="donotcopy_no">No</option>
+			</field>
+			<field class="st_setting cns_radios" name="hashaddress" id="hashaddress" type="radio" default="1" label="Measure copy &amp; shares of your site's URLs" description="">
+			  <option value="0" class="hashaddress_yes">Yes</option>
+			  <option value="1" class="hashaddress_no">No</option>
+			</field>
+			<field class="st_setting" type="spacer" name="myspacer_cns" label="&lt;div class='st_cns_container'&gt;CopyNShare is the new ShareThis widget feature that enables you to track the shares that occur when a user copies and pastes your website's URL or content. ShareThis adds a special #hashtag at the end of your address bar URL to keep track of where your content is being shared on the web, from Facebook, Twitter to emails, etc. When a user copies text within your site, a &quot;See more: yourURL.com#SThashtag&quot; will appear after the pasted text. Enable CopyNShare for your widget! &lt;a href=&quot;http://support.sharethis.com/customer/portal/articles/517332-share-widget-faqs#copynshare&quot; target=&quot;_blank&quot;&gt;FAQ&lt;/a&gt;.&lt;/div&gt;"></field>
+			<field name="sharethis_callesi" type="hidden" default="1" />
+			<!-- Ends: CNS functionality -->
+
+			<!-- Spacer to increase the panel height -->
+			<field type="spacer" default=" " />	
+		</fieldset>
+		</fields>
+	</config>
+	<params>
+		<!-- Provided widget version -->
+		<param name="widget_type" type="radio" default="1" label="Widget Type :" description="Choose shareThis widget version">
+			<option value="0">Classic</option> 
+			<option value="1">Multi-post</option> 
+		</param>
+		
+		<!-- Provided button styles -->
+		<param name="button_style" type="radio" default="button" label="Button Style :" description="Choose shareThis widget version">
+			<option value="lg-icons" class="st_option"><![CDATA[Large Icons<br /><img src="../modules/mod_sharethis/st_images/largeIcon.png" style='float:none;'><br /><br />]]></option>
+			<option value="lg-horizontal" class="st_option"><![CDATA[Horizontal Count<br /><img src="../modules/mod_sharethis/st_images/horizontalCounts.png"  style='float: none;'><br /><br />]]></option>
+			<option value="lg-vertical" class="st_option"><![CDATA[Vertical Count<br /><img src="../modules/mod_sharethis/st_images/verticalCounts.png" style='float:none;'><br /><br />]]></option>
+			<option value="sm-classic" class="st_option"><![CDATA[Classic<br /><img src="../modules/mod_sharethis/st_images/classic.png" style='float:none;'><br /> <br />]]></option>
+			<option value="sm-regular" class="st_option"><![CDATA[Regular Buttons<br /><img src="../modules/mod_sharethis/st_images/regularButtons.png" style='float:none;'><br /><br />]]></option>
+			<option value="sm-notext" class="st_option"><![CDATA[Regular Button No-Text<br /><img src="../modules/mod_sharethis/st_images/buttonNoText.png" style='float:none;'><br /><br />]]></option>
+			<option value="button" class="st_option"><![CDATA[Buttons<br /><img src="../modules/mod_sharethis/st_images/buttons.png" style='float:none;'><br /><br />]]></option>
+        </param>
+		
+		<param type="spacer" hr="true" default="&lt;script type='text/javascript' src='../modules/mod_sharethis/st_libraries/jquery.min.js'&gt;&lt;/script&gt;&lt;script type='text/javascript'&gt;var $j = jQuery.noConflict();&lt;/script&gt;&lt;script type='text/javascript' src='http://w.sharethis.com/button/buttons.js'&gt;&lt;/script&gt;&lt;script type='text/javascript' src='../modules/mod_sharethis/st_js/sharethis.js'&gt;&lt;/script&gt;&lt;link rel='stylesheet' type='text/css' href='../modules/mod_sharethis/st_css/msharethis.css'/&gt;&lt;div id='st_register_container_15'&gt;&lt;div id='st_inner_container'&gt;&lt;span id='st_register_instructions'&gt;Join the ShareThis Publisher Network of over 2M sites and get access to your social analytics.&lt;/span&gt;&lt;ol id='st_instructions_list_15'&gt;&lt;li&gt;&lt;a href='javascript:;' class='registerLink'&gt;Sign up&lt;/a&gt; for your free account now.&lt;/li&gt;&lt;li&gt;At the end of the flow, you will be given your unique publisher key. &lt;/li&gt;&lt;li&gt;Please copy and paste it in the textbox below.  &lt;i&gt;Although a publisher key is created by default, it  needs to be replaced with the newly generated one to access your domain specific reports.&lt;/i&gt; &lt;input style='visibility: hidden;' type='textarea'/&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;"></param>
+		
+		<!-- Given user provision to enter his/her Publisher key -->
+		<param class="st_setting pub_key_15" name="pubKey" type="text" label=" " description="Enter your Publisher Key" default="jm-00000000-0000-0000-0000-000000000000"></param>
+		<param name="hidden_field" type="hidden"></param>
+		
+		<!-- Spacer to increase the panel height -->
+		<param type="spacer" default=" " />
+     </params>
+	 <params group="advanced">
+		<param class="st_setting" name="pinterest" type="radio" default="0" label="Pinterest :" description="">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+        </param>
+		<param class="st_setting" name="linkedin" type="radio" default="0" label="LinkedIn :" description="">
+         <option value="0">Yes</option>
+         <option value="1">No</option>
+        </param>
+		<param class="st_setting" name="twitter" type="radio" default="1" label="Twitter Follow :" description="">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+        </param>
+		<param class="st_setting" name="username" type="text" default="" label=" " description="" size="20" />
+		<param class="st_setting" name="twittervia" type="radio" default="1" label="Via @twitter_handle :" description="">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+        </param>
+		<param class="st_setting" name="via" type="text" default="" label=" " description="" size="20" />       
+		<param class="st_setting" name="vinstagram" type="radio" default="1" label="Instagram Follow :" description="">
+          <option value="0">Yes</option>
+          <option value="1">No</option>
+        </param>
+		<param class="st_setting" name="userinstagram" type="text" default="" label=" " description="" size="20" />
+		<!-- Starts: CNS functionality -->
+		<param class="st_setting" name="cnslabel" id="cnslabel" type="radio" label="&lt;b style='font-size:13px;font-weight:bold;'&gt;CopyNShare: &lt;sup&gt;(&lt;a target='_blank' class='helpLink' href='http://support.sharethis.com/customer/portal/articles/517332-share-widget-faqs#copynshare'&gt;?&lt;/a&gt;)&lt;/sup&gt;&lt;/b&gt;" description="" />
+		<param class="st_setting" name="donotcopy" id="donotcopy" type="radio" default="1" label="Measure copy &amp; shares of your site's content" description="">
+		  <option value="0">Yes</option>
+		  <option value="1">No</option>
+		</param>
+		<param class="st_setting" name="hashaddress" id="hashaddress" type="radio" default="1" label="Measure copy &amp; shares of your site's URLs" description="">
+		  <option value="0">Yes</option>
+		  <option value="1">No</option>
+		</param>
+		<param type="spacer" hr="true" default="&lt;div class='st_cns_container_15'&gt;CopyNShare is the new ShareThis widget feature that enables you to track the shares that occur when a user copies and pastes your website's URL or content. ShareThis adds a special #hashtag at the end of your address bar URL to keep track of where your content is being shared on the web, from Facebook, Twitter to emails, etc. When a user copies text within your site, a &quot;See more: yourURL.com#SThashtag&quot; will appear after the pasted text. Enable CopyNShare for your widget! &lt;a href=&quot;http://support.sharethis.com/customer/portal/articles/517332-share-widget-faqs#copynshare&quot; target=&quot;_blank&quot;&gt;FAQ&lt;/a&gt;.&lt;/div&gt;"></param>
+		<param name="sharethis_callesi" type="hidden" default="1" />
+		<!-- Ends: CNS functionality -->
+		
+		<!-- Spacer to increase the panel height -->
+		<param type="spacer" default=" " />
+		<param type="spacer" default=" " />
+		<param type="spacer" default=" " />
+		<param type="spacer" default=" " />
+	</params>
+</extension>

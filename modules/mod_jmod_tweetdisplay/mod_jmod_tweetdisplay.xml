@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>JMod TweetDisplay</name>
+	<author>Sean Casco</author>
+    <creationDate>July 2013</creationDate>
+	<copyright>Copyright (C) 2013. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authoremail>info@jmodules.com</authoremail>
+    <authorurl>http://jmodules.com/ </authorurl>
+	<version>2.0</version>
+	<description><![CDATA[ <h1 style="color: red">To use this module follow this guide: <a href="http://jmodules.com/tutorials/jmod-tweetdisplay-documentation" target="_blank">How to Setup</a></h1>
+	]]></description>
+	<files>
+		<filename module="mod_jmod_tweetdisplay">mod_jmod_tweetdisplay.php</filename>
+		<folder>css</folder>
+		<folder>lib</folder>
+		<folder>images</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_jmod_tweetdisplay.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="&lt;div style=&quot;background-color: 	#95d2ca; padding: 5px; text-align:center; color: black; font-weight:bold;&quot;&gt;Authentication settings &lt;/div&gt;" />
+				<field name="consumer_key" type="text" default="" label="Consumer key" description="Consumer key for your app at https://dev.twitter.com/apps/new" />
+				<field name="consumer_secret" type="text" default="" label="Consumer secret" description="Consumer secret for your app at https://dev.twitter.com/apps/new" />
+				<field name="access_token" type="text" default="" label="Access token" description="Access token for your app at https://dev.twitter.com/apps/new" />
+				<field name="access_secret" type="text" default="" label="Access token secret" description="Access token secret for your app at https://dev.twitter.com/apps/new" />
+				<field type="spacer" name="&lt;div style=&quot;background-color: #95d2ca; padding: 5px; text-align:center; color: black; font-weight:bold;&quot;&gt;Widget settings&lt;/div&gt;" />
+				<field name="type" type="list" default="1" label="Widget type" description="Choose Timeline to display tweets of a specific user. Choose Search to get results about some query">
+					<option value="1">Timeline</option>
+					<option value="0">Search</option>
+				</field>
+				<field name="username" type="text" default="twitter" label="Username" description="Twitter username for which you want to display tweets if widget type is set to Timeline" />
+				<field name="query" type="text" default="" label="Search query" description="Query to be searched if widget type is set to Search" />
+				<field name="title" type="text" default="" label="Search title" description="Search title to be displayed in the header" />
+				<field name="link_title" type="list" default="1" label="Link search title" description="When set to yes, title will be link to the search query on Twitte">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="count" type="text" default="5" label="Tweet number" description="Number of Tweets to display" />
+				<field type="spacer" name="&lt;div style=&quot;background-color: #666; padding: 5px; text-align:center; color: #fff; font-weight:bold;&quot;&gt;Module appearance &lt;/div&gt;" />
+				<field name="width" type="text" default="" label="Width" description="Module width. Set to empty to use width of the parent container" />
+				<field name="height" type="text" default="" label="Height" description="Module height. If the height is smaller than the space required for tweets to fit, scrollbar will be displayed. Set to empty to never have the scrollbar and use full height" />
+				<field name="header" type="list" default="1" label="Show header" description="Show header on top of tweets. For timeline, this will be name, username and avatar, and for search it will be the search title">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="twitter_icon" type="list" default="1" label="Show twitter icon" description="Set to yes to display small twitter icon int the header">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" name="&lt;div style=&quot;background-color: #666; padding: 5px; text-align:center; color: #fff; font-weight:bold;&quot;&gt;Color options &lt;/div&gt;" />
+				<field name="bgd_color" type="color" default="#ffffff" label="Background color" description="Module background color. Default is white" />
+				<field name="link_color" type="color" default="#0084B4" label="Link color" description="Link color. Default is variation of blue" />
+				<field name="border_color" type="color" default="#cccccc" label="Border color" description="Border color, default is light gray" />
+				<field name="text_color" type="color" default="#333333" label="Text color" description="Text color, default is dark gray" />
+				<field name="header_link_color" type="color" default="#333333" label="Header name color" description="Link color for the Twitter name when widget type is set to Timeline" />
+				<field name="header_sub_color" type="color" default="#999999" label="Header username color" description="Link color for the Twitter username when widget type is set to Timeline" />
+				<field name="header_sub_hover_color" type="color" default="#666666" label="Header username on hover color" description="Link color for the Twitter username on mouse hover when widget type is set to Timeline" />
+				<field name="search_title_color" type="color" default="#333333" label="Search title color" description="Link color for the Search title when widget type is set to Search" />
+				<field type="spacer" name="&lt;div style=&quot;background-color: #666; padding: 5px; text-align:center; color: #fff; font-weight:bold;&quot;&gt;Tweet appearance &lt;/div&gt;" />
+				<field name="display_name" type="list" default="1" label="Display username" description="Should the twitter username be displayed?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="avatars" type="list" default="0" label="Display avatars" description="Should avatars be displayed?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="timestamps" type="list" default="1" label="Display Timestamps" description="Should timestamps be shown?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="reply" type="list" default="1" label="Reply link" description="Should reply link be shown?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="retweet" type="list" default="1" label="Retweet link" description="Should retweet link be shown?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="favorite" type="list" default="1" label="Favorite link" description="Should favorite link be shown?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_link" type="list" default="1" label="Donate link" description="A small link on the bottom of the module, it links on our website , it helps us and gives us credit for giving you this module.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

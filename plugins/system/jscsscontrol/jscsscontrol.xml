@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+    <name>PLG_JSCSSCONTROL</name>
+    <version>3-1</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Viktor Vogel</author>
+    <authoremail>admin@kubik-rubik.de</authoremail>
+    <authorUrl>http://joomla-extensions.kubik-rubik.de</authorUrl>
+    <copyright>Copyright 2013 Viktor Vogel. All rights reserved.</copyright>
+    <creationDate>08-Jan-2013</creationDate>
+    <description>PLG_JSCSSCONTROL_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="jscsscontrol">jscsscontrol.php</filename>
+        <filename plugin="jscsscontrol">index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_system_jscsscontrol.ini</language>
+        <language tag="en-GB">en-GB.plg_system_jscsscontrol.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/jscsscontrol/fields">
+            <fieldset name="basic">
+                <field name="js" type="textarea" default="" rows="8" cols="80" label="PLG_JSCSSCONTROL_JS" description="PLG_JSCSSCONTROL_JSDESC" />
+                <field name="css" type="textarea" default="" rows="8" cols="80" label="PLG_JSCSSCONTROL_CSS" description="PLG_JSCSSCONTROL_CSSDESC" />
+                <field name="debug" type="list" default="0" label="PLG_JSCSSCONTROL_DEBUG" description="PLG_JSCSSCONTROL_DEBUGDESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

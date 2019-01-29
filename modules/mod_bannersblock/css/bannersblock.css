@@ -1,0 +1,6 @@
+#banner_box ul { margin:0; padding:0; overflow:hidden; list-style-type:none;}
+#banner_box ul li { float:left; margin-left:20px; position:relative;}
+#banner_box ul li:first-child { margin-left:0;}
+#banner_box a { text-decoration:none;}
+#banner_box a img { margin-bottom:20px;}
+#banner_box a:hover p  { text-decoration:underline;}

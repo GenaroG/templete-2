@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>Module Video Block</name>
+	<creationDate>11/11/2013</creationDate>
+	<author>Olejenya</author>
+	<authorEmail>olejenya@olejenya.com</authorEmail>
+	<copyright>Copyright (C) 2012 Open Source Matters. All rights reserved.Olejenya</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1</version>
+	<description>Video Block Module is a Joomla! 2.5 Module which displays modules as a tab from joomla module manager.</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_video.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_video.sys.ini
+		</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_video">mod_video.php</filename>
+		<filename>mod_video.xml</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>media</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+	
+	<fields name="params"  >
+			<fieldset name="basic">
+				<field name="" type="spacer" label="--------------------------------------------SettingsVideoBlok1--------------------------------------------"></field>
+				<field name="vidselector" type="text" default="#video-top-un"
+					label="Video Selector"
+					description="Selector can be tag (body, footer etc), Unique class or ID (#page, #block)" />
+			
+				<field name="videopath" type="text" default="modules/mod_video/media/"
+					size="50"
+					label="Video path"
+					description="Specify path to the video files (add slash to the end)" />
+					
+					<field name="filesname" type="text" default="default"
+					label="Video files name"
+					description="All media files should have equal names. You need to prepare three videos(mp4,ogv,webm) and three images (gif,jpg,png)" />
+			
+				
+				
+			</fieldset>
+		   			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+				label="MOD_STYLESLIDE_MODULE_SUFX_LABEL" description="MOD_STYLESLIDE_MODULE_SUFX_DES" />
+			</fieldset>
+
+		   
+	</fields>	
+	</config>
+</extension>

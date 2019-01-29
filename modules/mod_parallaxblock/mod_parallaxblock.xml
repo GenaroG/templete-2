@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+	<name>Module ParallaxBlock</name>
+	<creationDate>11/11/2013</creationDate>
+	<author>Olejenya</author>
+	<authorEmail>olejenya@olejenya.com</authorEmail>
+	<copyright>Copyright (C) 2012 Open Source Matters. All rights reserved.Olejenya</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1</version>
+	<description>ParallaxblockBlock Module is a Joomla! 2.5 Module which displays modules as a tab from joomla module manager.</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_parallaxblock.ini
+		</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_parallaxblock.sys.ini
+		</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_parallaxblock">mod_parallaxblock.php</filename>
+		<filename>mod_parallaxblock.xml</filename>
+		<filename>helper.php</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+	
+	<fields name="params"  >
+		<fieldset name="basic">
+				<field name="" type="spacer" label="--------------------------------------------SettingsParallaxBlok1--------------------------------------------"></field>
+				<field name="selector" type="text" default="#parallax-top-un"
+					label="selector"
+					description="Selector alreay exists. You can't assign multiple parallax effects to a single block." />
+			
+				<field name="backgroundratio" type="text" default=""
+					label="background-ratio"
+					description="background-ratio -0.2 or 0.2" />
+					
+					<field name="horizontalOffset" type="text" default=""
+					label="horizontalOffset"
+					description="" />
+			
+				<field name="verticalOffset" type="text" default=""
+					label="verticalOffset"
+					description="" />
+				
+				<field name="mod_image" type="media" default=""
+				size="30" label="MOD_STYLESLIDE_70_LABEL" description="MOD_STYLESLIDE_70_DES" />
+				
+			</fieldset>
+		   	<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+				label="MOD_STYLESLIDE_MODULE_SUFX_LABEL" description="MOD_STYLESLIDE_MODULE_SUFX_DES" />
+			</fieldset>
+
+		   
+	</fields>	
+	</config>
+</extension>
